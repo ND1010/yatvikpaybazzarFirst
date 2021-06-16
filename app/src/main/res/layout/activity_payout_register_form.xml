@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.payment.yatvik.mygooglepay.activities.PayoutRegisterForm"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_gradient_gray"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/transparent"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/ppp_off"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:contentDescription="TODO"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/pro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Payout Form"
+            android:textColor="@color/ppp_off"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/backBtn2"
+            app:layout_constraintStart_toEndOf="@+id/backBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/backBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:rotation="180"
+            android:visibility="invisible"
+            android:backgroundTint="@color/ppp_off"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:contentDescription="TODO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="First Name"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_fname"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="First Name"
+                android:singleLine="true"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Last Name"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_lname"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Last Name"
+                android:singleLine="true"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Email ID"
+
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Email ID"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+
+                android:text="Mobile"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Mobile"
+                android:singleLine="true"
+                android:inputType="number"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="GST Number"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_gst"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="GST Number"
+                android:singleLine="true"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Account Number"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_account"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Account Number"
+                android:singleLine="true"
+                android:inputType="number"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="IFSC Code"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_ifsc"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="IFSC Code"
+                android:singleLine="true"
+                android:inputType="text"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Shop Name"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_shopname"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Shop Name"
+                android:singleLine="true"
+                android:inputType="text"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Shop Address"
+
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_shopaddress"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:maxLines="5"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Shop Address"
+                android:inputType="textMultiLine"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="216dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/border_buttom_round"
+                android:backgroundTint="@color/ppp_green"
+                android:elevation="4dp"
+                android:layout_gravity="center"
+                android:text="Pay Now"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

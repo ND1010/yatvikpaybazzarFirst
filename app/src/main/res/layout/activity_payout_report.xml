@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_gradient_gray"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/transparent"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/ppp_off"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:contentDescription="TODO"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/pro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Payout Reports"
+            android:textColor="@color/ppp_off"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/backBtn2"
+            app:layout_constraintStart_toEndOf="@+id/backBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/backBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:rotation="180"
+            android:visibility="visible"
+            android:backgroundTint="@color/ppp_off"
+            android:background="@drawable/ic_adjust"
+            android:contentDescription="TODO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginEnd="12dp"
+            android:alpha="0.2"
+            android:background="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_payout_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/ppp_off"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="12dp"
+            android:alpha="0.2"
+            android:background="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:visibility="visible"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/ll_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shape="ring"
+            android:id="@+id/nav_left"
+            android:layout_marginEnd="@dimen/_4sdp"
+            app:cardCornerRadius="55dp">
+
+            <ImageView
+                android:layout_width="@dimen/_22sdp"
+                android:padding="@dimen/_4sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/ic_right_arrow"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_pageno"
+                android:layout_width="@dimen/_40sdp"
+                android:maxLength="3"
+                android:textColor="@color/ppp_blue"
+                android:paddingHorizontal="@dimen/_4sdp"
+                android:gravity="center"
+                android:background="@drawable/border_round_only"
+                android:layout_height="@dimen/_22sdp"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:id="@+id/nav_search"
+            android:shape="ring"
+            app:cardCornerRadius="55dp">
+
+            <ImageView
+                android:layout_width="@dimen/_22sdp"
+                android:padding="@dimen/_4sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/ic_search_magnifier_interface_symbol"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shape="ring"
+            android:id="@+id/nav_right"
+            app:cardCornerRadius="55dp">
+
+            <ImageView
+                android:layout_width="@dimen/_22sdp"
+                android:padding="@dimen/_4sdp"
+                android:rotation="180"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/ic_right_arrow"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_12sdp"
+        android:id="@+id/frag_payout_rec"
+        android:layout_marginTop="@dimen/_4sdp"
+        tools:listitem="@layout/list_item_payout"
+        app:layout_constraintTop_toBottomOf="@id/ll_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:itemCount="5"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

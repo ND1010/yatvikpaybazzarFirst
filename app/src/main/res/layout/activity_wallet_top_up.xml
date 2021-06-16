@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.payment.yatvik.mygooglepay.activities.PayoutRegisterForm"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_gradient_gray"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/transparent"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/ppp_off"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:contentDescription="TODO"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/pro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Wallet Top Up"
+            android:textColor="@color/ppp_off"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/backBtn2"
+            app:layout_constraintStart_toEndOf="@+id/backBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/backBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:rotation="180"
+            android:visibility="invisible"
+            android:backgroundTint="@color/ppp_off"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:contentDescription="TODO"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24sdp"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="Mobile Number"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="@dimen/_10sdp" />
+
+        <EditText
+            android:id="@+id/et_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@drawable/border_buttom_round"
+            android:hint="Mobile Number"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingStart="@dimen/_16sdp"
+            android:singleLine="true"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="Email ID"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="@dimen/_10sdp" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@drawable/border_buttom_round"
+            android:hint="Email ID"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/_16sdp"
+            android:singleLine="true"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="4dp"
+            android:gravity="center"
+            android:text="Amount (18% GST applicable)"
+            android:textAllCaps="false"
+            android:textColor="#000"
+            android:textSize="@dimen/_10sdp" />
+
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:background="@drawable/border_buttom_round"
+            android:hint="Enter Amount for Recharge"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/_16sdp"
+            android:singleLine="true"
+            android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/tv_check_status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="Amount:Surcharge:Wallet:Remaining:"
+            android:textColor="@color/red"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_recharge"
+            android:layout_width="216dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/border_buttom_round"
+            android:backgroundTint="@color/ppp_green"
+            android:elevation="4dp"
+            android:layout_gravity="center"
+            android:text="Recharge"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

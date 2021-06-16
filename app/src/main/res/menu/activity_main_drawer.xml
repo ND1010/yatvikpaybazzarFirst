@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_members"
+            android:icon="@drawable/ic_user_solid"
+            android:title="Members" />
+        <item
+            android:id="@+id/nav_profle"
+            android:icon="@drawable/ic_user_solid"
+            android:title="Profile" />
+
+        <item
+            android:id= "@+id/nav_changePassword"
+            android:icon= "@drawable/ic_change_password"
+            android:title= "Change Password" />
+
+        <item
+            android:id="@+id/nav_aeps"
+            android:icon="@drawable/ic_apes"
+            android:title="AEPS" />
+        <item
+            android:id="@+id/nav_recharge"
+            android:icon="@drawable/ic_recharge"
+            android:title="Recharge" />
+        <item
+            android:id="@+id/nav_billpayment"
+            android:icon="@drawable/ic_payout"
+            android:title="Bill Payment" />
+
+        <item
+            android:id="@+id/nav_billhistory"
+            android:icon="@drawable/ic_payout"
+            android:title="Bill History" />
+        <item
+            android:id="@+id/nav_wallet"
+            android:icon="@drawable/ic_wallet"
+            android:title="Wallet" />
+        <item
+            android:id="@+id/nav_payout"
+            android:icon="@drawable/ic_payout"
+            android:title="Payout Report" />
+
+        <item
+            android:id="@+id/nav_payout_register"
+            android:icon="@drawable/ic_payout"
+            android:title="Payout Form" />
+
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_setting"
+            android:title="Setting" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+
+    </group>
+</menu>

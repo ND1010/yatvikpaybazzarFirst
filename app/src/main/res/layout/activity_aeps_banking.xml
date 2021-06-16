@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_gray"
+    android:orientation="vertical"
+    tools:context="com.payment.yatvik.mygooglepay.activities.AepsBanking">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/transparent"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:backgroundTint="@color/ppp_off"
+            android:contentDescription="TODO"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/pro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="Aeps Banking"
+            android:textColor="@color/ppp_off"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/backBtn2"
+            app:layout_constraintStart_toEndOf="@+id/backBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/backBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:backgroundTint="@color/ppp_off"
+            android:contentDescription="TODO"
+            android:rotation="180"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout2">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <TextView
+                android:id="@+id/tv_payfor_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Aeps Balance inquiry"
+                android:textAllCaps="true"
+                android:textColor="#000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Biometric Device"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <Spinner
+                android:id="@+id/spinner_finger_device"
+                style="@style/SpinnerTheme"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:entries="@array/devices"
+                android:paddingStart="@dimen/_16sdp"
+                android:spinnerMode="dialog"
+                android:textSize="13sp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Select Bank"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <Spinner
+                android:id="@+id/spi_Bank"
+                style="@style/SpinnerTheme"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_weight="1"
+                android:paddingStart="@dimen/_16sdp"
+                android:spinnerMode="dialog"
+                android:textSize="13sp"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tvBankAccountNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Deposit Bank Account Number"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_account_no"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Deposit Account No"
+                android:inputType="number"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_16sdp"
+                android:singleLine="true"
+                android:textSize="13sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Aadhaar Number"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_aadhaar"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Aadhaar No"
+                android:inputType="number"
+                android:maxLength="12"
+                android:maxLines="1"
+                android:paddingStart="@dimen/_16sdp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Mobile"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Mobile"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingStart="@dimen/_16sdp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Customer Name"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Name"
+                android:maxLength="20"
+                android:paddingStart="@dimen/_16sdp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tvLblAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:maxLength="10"
+                android:maxLines="1"
+                android:text="Amount"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_10sdp" />
+
+            <EditText
+                android:id="@+id/et_amount"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Enter Amount"
+                android:inputType="numberDecimal"
+                android:maxLength="7"
+                android:paddingStart="@dimen/_16sdp"
+                android:singleLine="true"
+                android:textSize="13sp" />
+
+
+            <TextView
+                android:id="@+id/tv_check_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="216dp"
+                android:layout_height="38dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/border_buttom_round"
+                android:backgroundTint="@color/ppp_green"
+                android:elevation="4dp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

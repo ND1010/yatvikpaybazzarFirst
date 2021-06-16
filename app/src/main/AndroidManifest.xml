@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.payment.yatvik.mygooglepay">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:name=".ApplicationTest"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:node="replace">
+        <activity android:name=".activities.MiniStatementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AepsTransactionRecieptActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ComingSoonActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.RegisterForm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AadharPay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.AepsBanking"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BCCertificate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WalletTopUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.DmrReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PayBillActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.DmrAddBeneficiary"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PayoutReport"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PayoutRegisterForm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.LoadingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BillsHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.BillCreateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MemberList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.SubCategory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.ForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.HomePage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.razorpay.ApiKey"
+            android:value="rzp_live_fVddBkhktrwIyX" />
+    </application>
+
+</manifest>

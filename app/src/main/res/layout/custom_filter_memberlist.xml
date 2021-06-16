@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_inner"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24sdp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:elevation="3dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_close"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginBottom="@dimen/_12sdp"
+                android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Search By Filter"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textColor="@color/ppp_blue"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Member Id"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_8sdp" />
+
+            <EditText
+                android:id="@+id/et_memberId"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Member Id"
+                android:singleLine="true"
+                android:inputType="textPersonName"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Name"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_8sdp" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Name"
+                android:singleLine="true"
+                android:inputType="textEmailAddress"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Contact Number"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_8sdp" />
+
+            <EditText
+                android:id="@+id/et_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Mobile"
+                android:singleLine="true"
+                android:inputType="number"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginBottom="4dp"
+                android:gravity="center"
+                android:text="Aadhar"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/_8sdp" />
+
+            <EditText
+                android:id="@+id/et_aadhar"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/border_buttom_round"
+                android:hint="Aadhar"
+                android:singleLine="true"
+                android:inputType="number"
+                android:paddingStart="@dimen/_16sdp"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btn_filter"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="30dp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:background="@drawable/border_buttom_round"
+                android:backgroundTint="@color/ppp_green"
+                android:text="Search"
+                android:layout_gravity="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

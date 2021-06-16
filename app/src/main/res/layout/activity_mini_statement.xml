@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_gray"
+    android:orientation="vertical"
+    tools:context="com.payment.yatvik.mygooglepay.activities.MiniStatementActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/transparent"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:backgroundTint="@color/ppp_off"
+            android:contentDescription="TODO"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/pro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:text="AePS Account Mini Statement"
+            android:textColor="@color/ppp_off"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/backBtn2"
+            app:layout_constraintStart_toEndOf="@+id/backBtn"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/backBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24"
+            android:backgroundTint="@color/ppp_off"
+            android:rotation="180"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintStatementDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dim_8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/draw_bg_border_blue"
+        android:paddingStart="@dimen/dim_16dp"
+        android:paddingEnd="@dimen/dim_16dp"
+        android:paddingBottom="@dimen/dim_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintLayout2">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:background="@drawable/draw_bg_border_blue"
+            android:padding="@dimen/dim_6dp"
+            android:text="Download statement"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAgentStatementTxnDateValue" />
+
+        <TextView
+            android:id="@+id/tvMainWalletBalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_16dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="NA" />
+
+        <ImageView
+            android:id="@+id/ivDownload"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/tvMainWalletBalance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvMainWalletBalance"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvMainWalletBalanceLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Available balance"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@id/tvMainWalletBalance"
+            app:layout_constraintTop_toBottomOf="@id/tvMainWalletBalance" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="@dimen/dim_16dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@id/tvMainWalletBalanceLabel" />
+
+        <TextView
+            android:id="@+id/tvAgentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8dp"
+            android:text="RRN: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMainWalletBalanceLabel" />
+
+        <TextView
+            android:id="@+id/tvAgentNameValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_4dp"
+            android:layout_marginEnd="@dimen/dim_8dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvAgentName"
+            app:layout_constraintTop_toTopOf="@id/tvAgentName"
+            tools:text="NA" />
+
+        <TextView
+            android:id="@+id/tvAgentAadharNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aadhaar No: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAgentNameValue" />
+
+        <TextView
+            android:id="@+id/tvAgentAadharNoValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_4dp"
+            android:layout_marginEnd="@dimen/dim_8dp"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvAgentAadharNo"
+            app:layout_constraintTop_toTopOf="@id/tvAgentAadharNo"
+            tools:text="NA" />
+
+
+        <TextView
+            android:id="@+id/tvAgentStatementTxnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Statement Date: "
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvAgentAadharNoValue" />
+
+        <TextView
+            android:id="@+id/tvAgentStatementTxnDateValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim_4dp"
+            android:layout_marginEnd="@dimen/dim_8dp"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvAgentStatementTxnDate"
+            app:layout_constraintTop_toTopOf="@id/tvAgentStatementTxnDate"
+            tools:text="04 April 2020, 12:30 PM" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewStatement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintStatementDetails"
+        android:overScrollMode="never"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

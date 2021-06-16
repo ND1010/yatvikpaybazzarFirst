@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/menu_icon"
+        android:layout_width="@dimen/_14sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:tint="@color/ppp_blue"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:src="@drawable/ic_dashboard"/>
+
+    <TextView
+        android:id="@+id/lblListHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/listPreferredItemHeightSmall"
+        android:gravity="center_vertical"
+        android:paddingStart="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:paddingEnd="?attr/listPreferredItemPaddingRight"
+        android:textColor="@color/ppp_blue"
+        android:text="Dashboard" />
+</LinearLayout>

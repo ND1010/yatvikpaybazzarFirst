@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.payment.yatvik.mygooglepay.MainActivity">
+
+    <EditText
+        android:id="@+id/edtAgentCode"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:textAllCaps="true"
+        android:text="RS00789"
+        android:inputType="textCapSentences"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Enter Agent code"/>
+
+
+    <Button
+        android:id="@+id/btnAepsBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aeps balance check"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtAgentCode" />
+
+    <Button
+        android:id="@+id/btnAepsWithdrawal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aeps Withdrawal Check"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAepsBalance" />
+
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnAepsBalanceICICI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ICICI bank Aeps balance"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAepsWithdrawal" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnAepsWithdrawalICICI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ICICI bank Aeps Withdrawal"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAepsBalanceICICI" />
+
+    <Button
+        android:id="@+id/btnAtmBal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Fino ATM balance check"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAepsWithdrawalICICI" />
+
+
+    <Button
+        android:id="@+id/btnAtmWithdrawal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fino ATM Withdrawal"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAtmBal" />
+
+    <Button
+        android:id="@+id/btnFinoAepsBal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fino Aeps Balance check"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAtmWithdrawal" />
+
+    <Button
+        android:id="@+id/btnFinoAepsWithdrawal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fino Aeps Withdrawal"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnFinoAepsBal" />
+
+    <Button
+        android:id="@+id/btnMiniStatement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mini Statement"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnFinoAepsWithdrawal" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
