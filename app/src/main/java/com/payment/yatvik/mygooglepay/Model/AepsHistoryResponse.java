@@ -550,10 +550,10 @@ public class AepsHistoryResponse {
         @SerializedName("amount")
         @Expose
         private String amount;
-        @SerializedName("ORDER_ID")
+        @SerializedName(value = "ORDER_ID",alternate = "RetailerTxnId")
         @Expose
         private String orderId;
-        @SerializedName("txnStatus")
+        @SerializedName(value = "txnStatus", alternate = "tra_status")
         @Expose
         private String txnStatus;
         @SerializedName("apiResponse")

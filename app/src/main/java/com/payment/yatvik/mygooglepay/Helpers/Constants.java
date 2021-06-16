@@ -17,7 +17,7 @@ public class Constants {
 //    public static final String BASE_URL= "https://b2b.mygooglepe.com/api/";     //-- for live test api
     public static final String BASE_URL = "https://b2b.yatvik.com/api/";     //-- for live test api
     public static final String LOGIN_URL = "https://b2b.yatvik.com/api/androidlogin";
-    public static final String JOIN_US_URL = "https://b2b.yatvik.com/api/join-us";
+    public static final String JOIN_US_URL = "https://b2b.yatvik.com/join-us";
     public static final String AEPS_SERVICE_FOR = "aeps_service_for";
     public static final String HISTORYTYPE = "historytype";
 

@@ -511,7 +511,7 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
 
                         }
 
-                        String activityToStart = "com.easypay.epmoney.demoinjavasdk.activities." + headerList.get(groupPosition).url;
+                        String activityToStart = "com.payment.yatvik.mygooglepay.activities." + headerList.get(groupPosition).url;
                         try {
                             Class<?> c = Class.forName(activityToStart);
                             Intent intent = new Intent(HomePage.this, c);
@@ -535,10 +535,10 @@ public class HomePage extends AppCompatActivity implements NavigationView.OnNavi
                     MenuModel model = childList.get(headerList.get(groupPosition)).get(childPosition);
                     String activityToStart;
                     if(model.url.equals("MainActivity")){
-                        activityToStart = "com.easypay.epmoney.demoinjavasdk." + model.url;
+                        activityToStart = "com.payment.yatvik.mygooglepay." + model.url;
 
                     }else {
-                         activityToStart = "com.easypay.epmoney.demoinjavasdk.activities." + model.url;
+                         activityToStart = "com.payment.yatvik.mygooglepay.activities." + model.url;
                     }
 
                     try {

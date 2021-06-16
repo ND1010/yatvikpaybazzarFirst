@@ -68,30 +68,14 @@ public class AepsHistoyAdapter extends RecyclerView.Adapter<AepsHistoyAdapter.As
         holder.transId.setText(astrologerModel.getOrderId());
         holder.status.setText(astrologerModel.getTxnStatus());
         holder.date.setText(astrologerModel.getUpdatedAt());
-        holder.service.setText(astrologerModel.getTransType());
+        holder.service.setText(astrologerModel.getAadhar());
         holder.operator.setText("AePS");
         holder.amount.setText(astrologerModel.getAmount());
         holder.mobile.setText(astrologerModel.getMobile());
         holder.message.setText(astrologerModel.getRrn());
         holder.btn_check.setVisibility(View.GONE);
-        /*holder.tvLblMobile.setVisibility(View.GONE);
-        holder.mobile.setVisibility(View.GONE);*/
-
-        /*if(astrologerModel.getTxnStatus().equals("SUCCESS")){
-            holder.btn_check.setVisibility(View.GONE);
-        }
-        else{
-            holder.btn_check.setVisibility(View.VISIBLE);
-        }
-
-        holder.btn_check.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                getCheckStatus(astrologerModel.getOrderId());
-            }
-        });*/
-
-
+        holder.tvLblMobile.setVisibility(View.GONE);
+        holder.mobile.setVisibility(View.GONE);
     }
 
     private void getCheckStatus(String transId) {
